@@ -10,7 +10,7 @@ uma imagem default para o time casa e visitante, já as bandeiras dos países da
 
 ## Instalação
 Clone o repositório e importe no Android Studio
-git clone https://github.com/AndreRTN/playtest.git
+comando: git clone https://github.com/AndreRTN/playtest.git
 
 APK: https://drive.google.com/file/d/1gfAvJu-ob0Cu4QS37Rl5THaBVPuBmSi5/view?usp=sharing
 
