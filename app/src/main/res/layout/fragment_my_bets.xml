@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="22dp"
+    tools:context=".ui.myBets.MyBetsFragment">
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:id="@+id/history_shrimmer"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+            <include layout="@layout/history_skeleton_shrimmer"/>
+
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_empty_history"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintVertical_bias="0.3"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_no_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_history"
+        android:layout_marginTop="52dp"
+        android:textColor="@color/primary_red"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/iv_empty_history"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você ainda não possui histórico de apostas"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_history_bets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/history_bet_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

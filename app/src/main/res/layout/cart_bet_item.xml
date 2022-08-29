@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/background_purple"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/background_purple"
+        android:padding="22dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:contentDescription="delete_bet"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_teams"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_to_result"
+
+            app:tint="@color/primary_red" />
+
+        <TextView
+            android:id="@+id/tv_to_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/iv_close"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="To win" />
+
+        <TextView
+            android:id="@+id/tv_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_to_result"
+
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="- SOUTH KOREA" />
+
+        <TextView
+            android:id="@+id/tv_teams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:maxWidth="280dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_to_result"
+            app:layout_constraintTop_toBottomOf="@id/tv_to_result"
+            tools:text="Sweden - South Korea" />
+
+
+        <TextView
+            android:id="@+id/tv_odd_multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_close"
+            tools:text="15.43" />
+
+        <ImageView
+            android:id="@+id/iv_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_trophy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+        <TextView
+            android:id="@+id/tv_winnings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Ganhos em potencial: "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_trophy"
+            app:layout_constraintStart_toEndOf="@id/iv_trophy"
+            app:layout_constraintTop_toTopOf="@id/iv_trophy" />
+
+        <TextView
+            android:id="@+id/tv_winnings_values"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="R$ 300,00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_trophy"
+            app:layout_constraintStart_toEndOf="@id/tv_winnings"
+            app:layout_constraintTop_toTopOf="@id/iv_trophy" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_bet_value"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="22dp"
+
+            android:hint="Valor apostado"
+            app:layout_constraintTop_toBottomOf="@id/tv_winnings_values">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_bet_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        app:dividerColor="@color/white" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
